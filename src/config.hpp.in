@@ -1,0 +1,41 @@
+#pragma once
+
+#include <filesystem>
+#include <string_view>
+
+namespace config {
+  inline constexpr std::string_view name = "@name@";
+
+  inline constexpr std::string_view version = "@version@";
+
+  namespace path {
+    inline constexpr std::filesystem::path prefix() {
+      return std::filesystem::path("@prefix@");
+    }
+
+    inline constexpr std::filesystem::path lib() {
+      return std::filesystem::path("@prefix@/@libdir@");
+    }
+
+    inline constexpr std::filesystem::path libexec() {
+      return std::filesystem::path("@prefix@/@libexecdir@");
+    }
+
+    inline constexpr std::filesystem::path data() {
+      return std::filesystem::path("@prefix@/@datadir@");
+    }
+
+    inline constexpr std::filesystem::path program_data() {
+      return std::filesystem::path("@prefix@/@datadir@/@name@");
+    }
+
+    inline constexpr std::filesystem::path bin() {
+      return std::filesystem::path("@prefix@/@bindir@");
+    }
+
+    inline constexpr std::filesystem::path sbin() {
+      return std::filesystem::path("@prefix@/@sbindir@");
+    }
+  }
+
+}

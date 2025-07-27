@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+# lazy script for I JUST WANNA RUN MY PROGRAM RIGHT NOW!!!!
+
+./configure --prefix="$(pwd)/build/root"
+cd build
+./gen
+./gen install
+./root/bin/* # this will run every single binary, which is pretty bad ;(.  dont forget to change this line

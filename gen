@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+if ! command -v ninja >/dev/null
+then
+  echo "Ninja (build system) is not installed on the system. More info: https://ninja-build.org/"
+  exit 1
+fi
+ninja $@
