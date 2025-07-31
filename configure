@@ -1,7 +1,0 @@
-#!/usr/bin/sh
-if ! command -v meson >/dev/null
-then
-  echo "Meson (build system) is not installed on the system. More info: https://mesonbuild.com"
-  exit 1
-fi
-meson setup build $@

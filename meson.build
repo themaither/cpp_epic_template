@@ -18,20 +18,5 @@ shut_up_options = [
   'b_sanitize=none'
 ]
 
-conf_data = configuration_data({
-  'name': meson.project_name(),
-  'version': meson.project_version(),
-  'prefix': get_option('prefix'),
-  'libdir': get_option('libdir'),
-  'libexecdir': get_option('libexecdir'),
-  'datadir': get_option('datadir'),
-  'bindir': get_option('bindir'),
-  'sbindir': get_option('sbindir'),
-})
-
-program_data_dir = get_option('datadir') / meson.project_name()
-
-configure_file(copy: true, install: false, input: 'gen', output: 'gen')
-
-subdir('src')
+subdir('include')
 subdir('tests')

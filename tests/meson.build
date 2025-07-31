@@ -10,7 +10,7 @@ test(
     dependencies: [
       catch2
     ],
-    include_directories: ['../src/'],
+    include_directories: ['../include/'],
     install: false,
   ),
 )
